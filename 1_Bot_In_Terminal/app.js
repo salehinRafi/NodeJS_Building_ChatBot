@@ -18,6 +18,16 @@ rl.on('line', reply => {
         switch (data.intent) {
             case 'Hello':
                 console.log("A big Hello From Vanilla!");
+                console.log(`${data.entities.greeting} to you too`);
+                rl.prompt();
+                break;
+            case 'Exit':
+                console.log("Have a Great Day!!");
+                process.exit(0);
+                break;
+            case 'CurrentWeather':
+                console.log(`Checking weather for ${data.entities.city}...`);
+                //get weather from API
                 rl.prompt();
                 break;
             default:
