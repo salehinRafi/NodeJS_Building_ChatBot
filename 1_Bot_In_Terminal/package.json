@@ -1,0 +1,14 @@
+{
+    "name": "metcuaca",
+    "version": "1.0.0",
+    "description": "A rule based weather bot",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Salehin Rafi",
+    "license": "ISC",
+    "dependencies": {
+        "xregexp": "3.1.1"
+    }
+}
