@@ -8,6 +8,8 @@ const rl = Readline.createInterface({
     terminal: false
 });
 const matcher = require('./matcher');
+const weather = require('./weather');
+const { currentWeather } = require('./parser'); // Destructuring
 
 
 rl.setPrompt('> ');
@@ -28,7 +30,14 @@ rl.on('line', reply => {
             case 'CurrentWeather':
                 console.log(`Checking weather for ${data.entities.city}...`);
                 //get weather from API
-                rl.prompt();
+                weather(data.entities.city, 'current').then(response => {
+                    let parseResult = currentWeather(response);
+                    console.log(parseResult);
+                    rl.prompt();
+                }).catch(error => {
+                    console.log('There seem to be a problem connecting to the Weather service');
+                    rl.prompt();
+                });
                 break;
             default:
                 console.log("I dont Know What You Mean");
