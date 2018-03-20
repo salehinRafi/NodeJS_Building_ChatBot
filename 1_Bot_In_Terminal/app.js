@@ -9,7 +9,7 @@ const rl = Readline.createInterface({
 });
 const matcher = require('./matcher');
 const weather = require('./weather');
-const { currentWeather } = require('./parser'); // Destructuring
+const { currentWeather, forecastWeather } = require('./parser'); // Destructuring
 
 
 rl.setPrompt('> ');
@@ -32,6 +32,18 @@ rl.on('line', reply => {
                 //get weather from API
                 weather(data.entities.city, 'current').then(response => {
                     let parseResult = currentWeather(response);
+                    console.log(parseResult);
+                    rl.prompt();
+                }).catch(error => {
+                    console.log('There seem to be a problem connecting to the Weather service');
+                    rl.prompt();
+                });
+                break;
+            case 'WeatherForecast':
+                console.log(`Checking weather for ${data.entities.city}...`);
+                //get weather from API
+                weather(data.entities.city).then(response => {
+                    let parseResult = forecastWeather(response, data.entities);
                     console.log(parseResult);
                     rl.prompt();
                 }).catch(error => {

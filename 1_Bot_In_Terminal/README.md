@@ -2,80 +2,43 @@
 
 Rule Based Weather Bot In Terminal
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-User <-> Parser <-> JSON <-> WeatherAPI
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+# Summary
+This is a weather forecast chatbot on a terminal platform that integrates with Yahoo Weather API to give a forecast based on location. By manipulating the user input with the regular expression to extract the entities set for a specific pattern based on user input. The entities contain the location, weather forecast and temperature.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+#### 1. Running the app
 ```
-Give an example
+nodemon ./app.js
+````
+
+#### 2. . Give an Input
+For Greetings
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
+Hi | Hello | Hey
+````
+For Farewell
 ```
-Give an example
+Bye | Exit | Later
+````
+Get a Current Weather
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+like in { any-location-you-want }
+Eg: What is the weather like in Kuala Lumpur
+````
+Get a Forecast Weather
+```
+will it be {hot|rain|snow|thunderstorm} {tomorrow|day after tomorrow|today} in { any-location-you-want }
+Eg: Will it be hot tomorrot in Kualau Lumpur
+````
 ## Built With
 
-* [Node.js](https://nodejs.org/en/) - The framework used
+* [Node.js](https://nodejs.org/en/) - The platform used
 * [Yahoo Weather API](https://developer.yahoo.com/weather/) - Getting Weather Forecast
 * [XRegExp](http://xregexp.com/) - JavaScript Regular Expressions
-
+* [Colors](https://www.npmjs.com/package/colors) - Get color and style in node.js console
+* [Moment](https://momentjs.com/) - Parse, validate, manipulate, and display dates and times in JavaScript.
 
 ## Authors
 
 * **Salehin Rafi** - *Initial work*
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
