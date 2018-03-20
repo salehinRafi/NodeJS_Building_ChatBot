@@ -1,5 +1,8 @@
 'use strict';
 
+const colors = require('colors');
+const dictionary = require('./dictionary');
+
 let getFeel = temp => {
     if (temp < 5) {
         return "shivering cold";
@@ -16,15 +19,24 @@ let getFeel = temp => {
     }
 };
 
+let getPrefix = (conditionCode, tense = 'present') => {
+    let findPrefix = dictionary[tense].find(item => {
+        if (item.codes.indexOf(Number(conditionCode)) > -1) {
+            return true;
+        }
+    });
+
+    return findPrefix.prefix || "";
+};
 
 let currentWeather = response => {
     if (response.query.results) {
         let resp = response.query.results.channel;
         let location = `${resp.location.city}, ${resp.location.country}`;
         // Access Conditions.
-        let { text, temp } = resp.item.condition; // text = resp.item.condition.text; temp = resp.item.condition.temp
+        let { text, temp, code } = resp.item.condition; // text = resp.item.condition.text; temp = resp.item.condition.temp
 
-        return `Right now, it is ${text.toLowerCase()} in ${location}. It is ${getFeel(Number(temp))} at ${temp} degree Celcius.`
+        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp)).bold} at ${temp.red.bold} degree Celcius.`
     }
 };
 
