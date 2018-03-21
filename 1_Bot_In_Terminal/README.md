@@ -29,7 +29,7 @@ Eg: What is the weather like in Kuala Lumpur
 Get a Forecast Weather
 ```
 will it be {hot|rain|snow|thunderstorm} {tomorrow|day after tomorrow|today} in { any-location-you-want }
-Eg: Will it be hot tomorrot in Kualau Lumpur
+Eg: Will it be hot tomorrow in Kualau Lumpur
 ````
 
 
