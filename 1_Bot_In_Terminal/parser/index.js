@@ -35,11 +35,11 @@ let getDate = day => {
     let dayStr = day.toLowerCase().trim();
     switch (dayStr) {
         case "tomorrow":
-            return moment().add(1, "d").format("DD MM YYYY");
+            return moment().add(1, "d").format("DD MMM YYYY");
         case "day after tomorrow":
-            return moment().add(2, "d").format("DD MM YYYY");
+            return moment().add(2, "d").format("DD MMM YYYY");
         default:
-            return moment().format("DD MM YYYY");
+            return moment().format("DD MMM YYYY");
     }
 };
 
@@ -61,6 +61,7 @@ let forecastWeather = (response, data) => {
     if (response.query.results) {
         // convert 'today', 'tomorrow', 'day after tomorrow' into date format. Eg. 20 March 2018
         let parseDate = getDate(data.time);
+        //console.log(`parseDate: ${parseDate}`); //Check Date Format return is correct or not.
         let resp = response.query.results.channel;
         let getForecast = resp.item.forecast.filter(item => {
             return item.date === parseDate;

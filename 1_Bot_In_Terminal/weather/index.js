@@ -5,7 +5,7 @@ const YQL = require('yql');
 let getWeather = (location, type = 'forecast') => {
     // Javascript offer to handle asynchronous
     return new Promise((resolve, reject) => {
-        let query = new YQL(`select ${type==='current'? 'item.condition, location': '*'} from  weather.forecast where woeid in (select woeid from geo.places(1) where text="${location}") and u="c"`);
+        let query = new YQL(`select ${type === 'current' ? 'item.condition, location' : '*'} from  weather.forecast where woeid in (select woeid from geo.places(1) where text="${location}") and u="c"`);
 
         query.exec((error, response) => {
             if (error) {

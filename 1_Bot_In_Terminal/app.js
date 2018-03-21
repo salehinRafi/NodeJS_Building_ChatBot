@@ -30,26 +30,30 @@ rl.on('line', reply => {
             case 'CurrentWeather':
                 console.log(`Checking weather for ${data.entities.city}...`);
                 //get weather from API
-                weather(data.entities.city, 'current').then(response => {
-                    let parseResult = currentWeather(response);
-                    console.log(parseResult);
-                    rl.prompt();
-                }).catch(error => {
-                    console.log('There seem to be a problem connecting to the Weather service');
-                    rl.prompt();
-                });
+                weather(data.entities.city, 'current')
+                    .then(response => {
+                        let parseResult = currentWeather(response);
+                        console.log(parseResult);
+                        rl.prompt();
+                    })
+                    .catch(error => {
+                        console.log('There seem to be a problem connecting to the Weather service');
+                        rl.prompt();
+                    });
                 break;
             case 'WeatherForecast':
                 console.log(`Checking weather for ${data.entities.city}...`);
                 //get weather from API
-                weather(data.entities.city).then(response => {
-                    let parseResult = forecastWeather(response, data.entities);
-                    console.log(parseResult);
-                    rl.prompt();
-                }).catch(error => {
-                    console.log('There seem to be a problem connecting to the Weather service');
-                    rl.prompt();
-                });
+                weather(data.entities.city)
+                    .then(response => {
+                        let parseResult = forecastWeather(response, data.entities);
+                        console.log(parseResult);
+                        rl.prompt();
+                    })
+                    .catch(error => {
+                        console.log('There seem to be a problem connecting to the Weather service');
+                        rl.prompt();
+                    });
                 break;
             default:
                 console.log("I dont Know What You Mean");
