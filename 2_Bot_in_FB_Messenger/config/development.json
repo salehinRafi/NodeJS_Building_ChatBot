@@ -1,4 +1,6 @@
 {
-    "PAGE_ACCESS_TOKEN": "EAACnChyneq4BACxjjHD04iFX6ZAZCF5GSJI0etGhO4zi8OAZCTnI7fxRDB5DTCtvFSagt7LxZAPKLFPCI0dbt3FZBwHpSYydKho5hmNqYfYXzlIKr0nthUVhVpIMSdosNosRZClTrbon1YL0oYTZAxLSWdOi7vkZByKvyv3tZAPaeWyDWHrjKpDx0",
-    "VERIFY_TOKEN": "a4ebdb175c48b096b7facbdc99d262ff25fe28cce5706505"
+    "PAGE_ACCESS_TOKEN": "EAACq42tW30YBAKZCtgwZCeU41udGhujWNOZBJENUaz7GGjswDS0P1tk9g9HEHTi6UASk8ObBlJCG8jGbRWMh0wI7QWG49jw4cuIlDbcBfqCjdDKjTZBG6mdkVA4avDpyzWXwxTYVF7cPJsZB0ufDHrXcydiySPAcyAMFrdIIfNNbFHiZB3rN3K",
+    "VERIFY_TOKEN": "a4ebdb175c48b096b7facbdc99d262ff25fe28cce5706505",
+    "URI_MESSAGE": "https://graph.facebook.com/v2.12/me/messages",
+    "URI_SUBSCRIBE": "https://graph.facebook.com/v2.12/me/subscribed_apps"
 }
