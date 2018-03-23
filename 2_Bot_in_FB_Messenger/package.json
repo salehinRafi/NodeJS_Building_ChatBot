@@ -9,10 +9,7 @@
     "author": "Salehin Rafi",
     "license": "ISC",
     "dependencies": {
-        "colors": "1.2.1",
-        "moment": "2.21.0",
-        "restify": "4.1.1",
-        "xregexp": "4.1.1",
-        "yql": "1.0.2"
+        "request": "2.73.0",
+        "restify": "4.1.1"
     }
 }
