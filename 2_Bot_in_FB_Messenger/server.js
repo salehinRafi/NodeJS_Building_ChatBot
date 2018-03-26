@@ -40,7 +40,6 @@ server.post('/', (req, res, next) => {
         // Simple Usage of helper.
         //f.txt(msg.sender, `Hey you just send ${msg.message.text}`);// invoke function to test text message.
         //f.img(msg.sender, "https://cdn.pixabay.com/photo/2017/08/21/21/25/cloudy-2667021_960_720.png"); // invoke function to test image message.
-
         // Process TEXT message
         if (msg.message.text) {
             // if a text message receive
@@ -74,6 +73,8 @@ server.post('/', (req, res, next) => {
                 }
             });
         }
+        // Show how to ask
+        f.txt(msg.sender, "You can ask by following below format: \n\n 1. *CURRENT WEATHER*: \n 'like in <location>' \n\n Eg: what is the weather _like in Kuala Lumpur_\n\n 2. *FORECAST WEATHER*:\n '<hot | cold | rain | rainy | sunny | snow | thunderstorms | windy | drizzle> in <location> <day after tomorrow | tomorrow | today> \n\n Eg: Will it _hot in Kuala Lumpur tomorrow_ \n\n OR \n\n '<hot | cold | rain | rainy | sunny | snow | thunderstorms | windy | drizzle> <day after tomorrow | tomorrow | today> in <location>' \n\n Eg: Will it _rain tomorrow in Kuala Lumpur_");
     });
     return next();
 });
