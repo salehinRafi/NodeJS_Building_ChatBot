@@ -19,7 +19,7 @@ require('crypto').randomBytes(24).toString('hex')
 
 #### 1. Running the app
 ```
-nodemon ./app.js
+nodemon ./server.js
 ````
 
 #### 2. . Give an Input
@@ -49,7 +49,6 @@ Eg: Will it be hot tomorrow in Kualau Lumpur
 * [Node.js](https://nodejs.org/en/) - The platform used
 * [Yahoo Weather API](https://developer.yahoo.com/weather/) - Getting Weather Forecast
 * [XRegExp](http://xregexp.com/) - JavaScript Regular Expressions
-* [Colors](https://www.npmjs.com/package/colors) - Get color and style in node.js console
 * [Moment](https://momentjs.com/) - Parse, validate, manipulate, and display dates and times in JavaScript.
 
 ## Authors
