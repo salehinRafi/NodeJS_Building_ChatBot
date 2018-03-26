@@ -1,6 +1,6 @@
 {
-    "PAGE_ACCESS_TOKEN": "Your_App_Page_Token",
-    "VERIFY_TOKEN": "Your_Verify_Token",
+    "PAGE_ACCESS_TOKEN": "EAASgFy79o2ABALvjapcn1AxtxJ0almCx2YsvxhMJfhlR7KiBUNn5QvkiK96VvZBNAuRMU1Bqyn70S5Mlex8YLGCip0yXDQMpPRqFgKin2FzkxuQ58LzmxWaNoE4I5hpB2PALTX9qSM9s2ZBkEn9ZAbpZBcAvdRZAvLuQzJ4eBL2F61Q4cTZAZBA",
+    "VERIFY_TOKEN": "a4ebdb175c48b096b7facbdc99d262ff25fe28cce5706505",
     "URI_MESSAGE": "https://graph.facebook.com/v2.12/me/messages",
     "URI_SUBSCRIBE": "https://graph.facebook.com/v2.12/me/subscribed_apps"
 }
