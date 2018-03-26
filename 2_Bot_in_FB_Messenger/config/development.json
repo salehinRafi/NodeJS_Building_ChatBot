@@ -1,0 +1,6 @@
+{
+    "PAGE_ACCESS_TOKEN": "YOUR_FB_APP_ACCESS_TOKEN",
+    "VERIFY_TOKEN": "YOUR_VERIFY_TOKEN",
+    "URI_MESSAGE": "https://graph.facebook.com/v2.12/me/messages",
+    "URI_SUBSCRIBE": "https://graph.facebook.com/v2.12/me/subscribed_apps"
+}
