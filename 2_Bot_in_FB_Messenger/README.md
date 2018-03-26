@@ -7,22 +7,26 @@ This is a weather forecast chatbot on a Facebook Messenger platform that integra
 
 # Installing
 
-#### 1. Setup PAGE_ACCESS_TOKEN
-#### 2. Setup VERIFY_TOKEN
-Run Command below and paste the result in development.json
-````
-node
-require('crypto').randomBytes(24).toString('hex')
-````
+
+#### 1. Setup VERIFY_TOKEN
+1. Run Command below and paste the result in config/development.json under `VERIFY_TOKEN` field.
+    ````
+    node
+    require('crypto').randomBytes(24).toString('hex')
+    ````
+
+#### 2. Setup PAGE_ACCESS_TOKEN
+1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
+
+2. In the app go to Messenger tab then click Setup Webhook. Here you will put in the URL of your server or ngrok url and a token. Make sure to check the 'message' subscription fields.
+
+3. Get a Page Access Token and save this at config/development.json under `PAGE_ACCESS_TOKEN` field.
+
+4. Select a page to subscribe your webhook to the page events.
 
 ## Running the tests
 
-#### 1. Running the app
-```
-nodemon ./server.js
-````
-
-#### 2. . Give an Input
+#### Give an input
 For Greetings
 ```
 Hi | Hello | Hey
@@ -50,6 +54,7 @@ Eg: Will it be hot tomorrow in Kualau Lumpur
 * [Yahoo Weather API](https://developer.yahoo.com/weather/) - Getting Weather Forecast
 * [XRegExp](http://xregexp.com/) - JavaScript Regular Expressions
 * [Moment](https://momentjs.com/) - Parse, validate, manipulate, and display dates and times in JavaScript.
+* [Request](https://www.npmjs.com/package/request) - Request is designed to be the simplest way possible to make http request/calls. It supports HTTPS and follows redirects by default.
 
 ## Authors
 
