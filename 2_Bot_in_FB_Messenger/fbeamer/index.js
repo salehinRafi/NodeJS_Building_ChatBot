@@ -53,7 +53,7 @@ class FBeamer {
     incoming(req, res, cb) {
         // Extract body of the POST request
         let data = req.body;
-        console.log(data);
+        //console.log(data);
         if (data.object === "page") {
             // Iterate  through the page entry Array
             data.entry.forEach(pageObj => {
@@ -98,7 +98,7 @@ class FBeamer {
         });
     }
 
-    // Helper to test send message
+    // Helper to send message
     txt(id, text) {
         let obj = {
             recipient: {
@@ -108,7 +108,25 @@ class FBeamer {
                 text
             }
         }
+        this.sendMessage(obj)
+            .catch(error => console.log(error));
+    }
 
+    // Helper to send image message
+    img(id, url) {
+        let obj = {
+            recipient: {
+                id
+            },
+            message: {
+                attachment: {
+                    type: 'image',
+                    payload: {
+                        url
+                    }
+                }
+            }
+        }
         this.sendMessage(obj)
             .catch(error => console.log(error));
     }
